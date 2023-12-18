@@ -5,11 +5,382 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="./sass/index.scss">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
-    <div>Hello</div>
+    <div class="container">
+        <header class="header">
+            <button type="button" class="mob-menu-btn" data-menu-open>
+                <svg class="mob-menu-icon" width="24" height="24">
+                    <use href="./images/svg-sprite.svg#icon-menu"></use>
+                </svg>
+            </button>
+            <nav class="nav nav-mob">
+                <div>
+                    <div class="nav-logo-wrap">
+                        <a href="./index.html" class="nav-logo">
+                            <svg class="nav-logo-icon" width="37" height="37">
+                                <use href="./images/svg-sprite.svg#icon-setting"></use>
+                            </svg>
+                            <span class="nav-logo-text">
+                                Dashboard
+                                <span class="nav-logo-version">v.01</span>
+                            </span>
+                        </a>
+                    </div>
+                    <ul class="nav-link-list">
+                        <li class="nav-link-item">
+                            <a href="./dashboard.html" class="nav-link">
+                                <div class="nav-link-wrap">
+                                    <svg class="nav-link-icon" width="24" height="24">
+                                        <use href="./images/svg-sprite.svg#icon-key"></use>
+                                    </svg>
+                                    <span class="nav-link-text">
+                                        Dashboard
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="" class="nav-link">
+                                <div class="nav-link-wrap">
+                                    <svg class="nav-link-icon" width="24" height="24">
+                                        <use href="./images/svg-sprite.svg#icon-d-square"></use>
+                                    </svg>
+                                    <span class="nav-link-text">
+                                        Product
+                                    </span>
+                                </div>
+                                <svg class="nav-link-icon" width="24" height="24">
+                                    <use href="./images/svg-sprite.svg#icon-chevron-right"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-link-item active">
+                            <a href="" class="nav-link">
+                                <div class="nav-link-wrap">
+                                    <svg class="nav-link-icon" width="24" height="24">
+                                        <use href="./images/svg-sprite.svg#icon-user-square">
+                                        </use>
+                                    </svg>
+                                    <span class="nav-link-text">
+                                        Customers
+                                    </span>
+                                </div>
+                                <svg class="nav-link-icon" width="24" height="24">
+                                    <use href="./images/svg-sprite.svg#icon-chevron-right"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="" class="nav-link">
+                                <div class="nav-link-wrap">
+                                    <svg class="nav-link-icon" width="24" height="24">
+                                        <use href="./images/svg-sprite.svg#icon-wallet-money"></use>
+                                    </svg>
+                                    <span class="nav-link-text">
+                                        Income
+                                    </span>
+                                </div>
+                                <svg class="nav-link-icon" width="24" height="24">
+                                    <use href="./images/svg-sprite.svg#icon-chevron-right"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="" class="nav-link">
+                                <div class="nav-link-wrap">
+                                    <svg class="nav-link-icon" width="24" height="24">
+                                        <use href="./images/svg-sprite.svg#icon-discount-shape"></use>
+                                    </svg>
+                                    <span class="nav-link-text">
+                                        Promote
+                                    </span>
+                                </div>
+                                <svg class="nav-link-icon" width="24" height="24">
+                                    <use href="./images/svg-sprite.svg#icon-chevron-right"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="" class="nav-link">
+                                <div class="nav-link-wrap">
+                                    <svg class="nav-link-icon" width="24" height="24">
+                                        <use href="./images/svg-sprite.svg#icon-message-question"></use>
+                                    </svg>
+                                    <span class="nav-link-text">
+                                        Help
+                                    </span>
+                                </div>
+                                <svg class="nav-link-icon" width="24" height="24">
+                                    <use href="./images/svg-sprite.svg#icon-chevron-right"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-user-wrap">
+                    <img alt="img-avatar" src="./images/Ellipse 8.jpg" class="nav-user-img">
+                    <div>
+                        <div class="nav-user-name">Evano</div>
+                        <div class="nav-user-position">Project Manager</div>
+                    </div>
+                </div>
+            </nav>
+            <nav class="nav container-nav-mob is-hidden" data-menu>
+                <div>
+                    <div class="nav-logo-wrap">
+                        <a href="./index.html" class="nav-logo">
+                            <svg class="nav-logo-icon" width="37" height="37">
+                                <use href="./images/svg-sprite.svg#icon-setting"></use>
+                            </svg>
+                            <span class="nav-logo-text">
+                                Dashboard
+                                <span class="nav-logo-version">v.01</span>
+                            </span>
+                        </a>
+                        <button type="button" class="nav-mob-close" data-menu-close>
+                            <svg class="mob-menu-icon" width="24" height="24">
+                                <use href="./images/svg-sprite.svg#icon-clear"></use>
+                            </svg>
+                        </button>
+                    </div>
+                    <ul class="nav-link-list">
+                        <li class="nav-link-item">
+                            <a href="./dashboard.html" class="nav-link">
+                                <div class="nav-link-wrap">
+                                    <svg class="nav-link-icon" width="24" height="24">
+                                        <use href="./images/svg-sprite.svg#icon-key"></use>
+                                    </svg>
+                                    <span class="nav-link-text">
+                                        Dashboard
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="" class="nav-link">
+                                <div class="nav-link-wrap">
+                                    <svg class="nav-link-icon" width="24" height="24">
+                                        <use href="./images/svg-sprite.svg#icon-d-square"></use>
+                                    </svg>
+                                    <span class="nav-link-text">
+                                        Product
+                                    </span>
+                                </div>
+                                <svg class="nav-link-icon" width="24" height="24">
+                                    <use href="./images/svg-sprite.svg#icon-chevron-right"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-link-item active">
+                            <a href="" class="nav-link">
+                                <div class="nav-link-wrap">
+                                    <svg class="nav-link-icon" width="24" height="24">
+                                        <use href="./images/svg-sprite.svg#icon-user-square"></use>
+                                    </svg>
+                                    <span class="nav-link-text">
+                                        Customers
+                                    </span>
+                                </div>
+                                <svg class="nav-link-icon" width="24" height="24">
+                                    <use href="./images/svg-sprite.svg#icon-chevron-right"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="" class="nav-link">
+                                <div class="nav-link-wrap">
+                                    <svg class="nav-link-icon" width="24" height="24">
+                                        <use href="./images/svg-sprite.svg#icon-wallet-money"></use>
+                                    </svg>
+                                    <span class="nav-link-text">
+                                        Income
+                                    </span>
+                                </div>
+                                <svg class="nav-link-icon" width="24" height="24">
+                                    <use href="./images/svg-sprite.svg#icon-chevron-right"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="" class="nav-link">
+                                <div class="nav-link-wrap">
+                                    <svg class="nav-link-icon" width="24" height="24">
+                                        <use href="./images/svg-sprite.svg#icon-discount-shape"></use>
+                                    </svg>
+                                    <span class="nav-link-text">
+                                        Promote
+                                    </span>
+                                </div>
+                                <svg class="nav-link-icon" width="24" height="24">
+                                    <use href="./images/svg-sprite.svg#icon-chevron-right"></use>
+                                </svg>
+                            </a>
+                        </li>
+                        <li class="nav-link-item">
+                            <a href="" class="nav-link">
+                                <div class="nav-link-wrap">
+                                    <svg class="nav-link-icon" width="24" height="24">
+                                        <use href="./images/svg-sprite.svg#icon-message-question"></use>
+                                    </svg>
+                                    <span class="nav-link-text">
+                                        Help
+                                    </span>
+                                </div>
+                                <svg class="nav-link-icon" width="24" height="24">
+                                    <use href="./images/svg-sprite.svg#icon-chevron-right"></use>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-user-wrap">
+                    <img alt="img-avatar" src="./images/Ellipse 8.jpg" class="nav-user-img">
+                    <div>
+                        <div class="nav-user-name">Evano</div>
+                        <div class="nav-user-position">Project Manager</div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <h1 class="main-title">Hello Evano 👋🏼,</h1>
+            <section class="customers">
+                <div class="search-bar-wrap">
+                    <div>
+                        <h2 class="seccondary-title">All Customers</h2>
+                        <div class="customers-active">Active Members</div>
+                    </div>
+                    <form>
+                        <input type="text" placeholder="Search" class="customers-search-bar">
+                        <button type="submit" class="customers-search-bar-btn-submit">
+                            <svg class="nav-link-icon" width="24" height="24">
+                                <use href="./images/svg-sprite.svg#icon-search"></use>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                <ul class="customers-list">
+                    <li class="customers-item">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <td>Jane Cooper</td>
+                                </tr>
+                                <tr>
+                                    <th>Company</th>
+                                    <td>Microsoft</td>
+                                </tr>
+                                <tr>
+                                    <th>Phone Number</th>
+                                    <td>(225) 555-0118</td>
+                                </tr>
+                                <tr>
+                                    <th>Email</th>
+                                    <td>jane@microsoft.com</td>
+                                </tr>
+                                <tr>
+                                    <th>Country</th>
+                                    <td>United States</td>
+                                </tr>
+                                <tr>
+                                    <th>Status</th>
+                                    <td class="customers-item-status-active">Active</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="customers-item">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <td>Floyd Miles</td>
+                                </tr>
+                                <tr>
+                                    <th>Company</th>
+                                    <td>Yahoo</td>
+                                </tr>
+                                <tr>
+                                    <th>Phone Number</th>
+                                    <td>(205) 555-0100</td>
+                                </tr>
+                                <tr>
+                                    <th>Email</th>
+                                    <td>floyd@yahoo.com</td>
+                                </tr>
+                                <tr>
+                                    <th>Country</th>
+                                    <td>Kiribati</td>
+                                </tr>
+                                <tr>
+                                    <th>Status</th>
+                                    <td class="customers-item-status-active">Active</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                    <li class="customers-item">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>Customer Name</th>
+                                    <td>Ronald Richards</td>
+                                </tr>
+                                <tr>
+                                    <th>Company</th>
+                                    <td>Adobe</td>
+                                </tr>
+                                <tr>
+                                    <th>Phone Number</th>
+                                    <td>(302) 555-0107</td>
+                                </tr>
+                                <tr>
+                                    <th>Email</th>
+                                    <td>ronald@adobe.com</td>
+                                </tr>
+                                <tr>
+                                    <th>Country</th>
+                                    <td>Israel</td>
+                                </tr>
+                                <tr>
+                                    <th>Status</th>
+                                    <td class="customers-item-status-inactive">Inactive</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </li>
+                </ul>
+                <div class="pages">
+                    <span class="pages-desription">Showing data 1 to 8 of 256K entries</span>
+                    <div class="pages-numbers">
+                        <span class="pages-numbers-items">
+                            <svg class="nav-link-icon nav-link-icon-chevron-left" width="8" height="12">
+                                <use href="./images/svg-sprite.svg#icon-chevron-right"></use>
+                            </svg>
+                        </span>
+                        <span class="pages-numbers-items">1</span>
+                        <span class="pages-numbers-items">2</span>
+                        <span class="pages-numbers-items">3</span>
+                        <span class="pages-numbers-items">
+                            <svg class="nav-link-icon" width="8" height="12">
+                                <use href="./images/svg-sprite.svg#icon-chevron-right"></use>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
 </body>
+<script src="./js/mob-menu.js"></script>
 
 </html>

@@ -1,0 +1,30 @@
+.container-nav-mob {
+  padding: 35px;
+  padding-top: 20px;
+  margin: 0 auto;
+  width: 335px;
+  overflow: auto;
+
+  @include tabletScreen {
+    display: none;
+  }
+}
+
+.mob-menu-btn {
+  all: unset;
+
+  @include tabletScreen {
+    display: none;
+  }
+}
+
+.nav-mob-close {
+  all: unset;
+  transition: $main-transition;
+
+  @include hover {
+    transform: scale(1.2);
+    fill: $nav-hover-color;
+    cursor: pointer;
+  }
+}

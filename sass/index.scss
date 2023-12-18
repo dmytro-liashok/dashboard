@@ -1,12 +1,10 @@
-@import "./breakpoints.scss";
-@import "./mixins.scss";
-@import "./variable.scss";
+@import "./styles.scss";
 
 html {
   box-sizing: border-box;
   width: 100vw;
   overflow-x: hidden;
-  background-color: red;
+  line-height: normal;
 }
 
 *,
@@ -18,12 +16,12 @@ html {
 }
 
 body {
-  //   font-family: "";
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   font-size: 14px;
   color: $main-color;
-  background-color: $black-color;
+  background-color: #fafbff;
 }
 
 img {
@@ -60,4 +58,46 @@ a {
 
 button {
   cursor: pointer;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.container {
+  padding: 0 15px;
+  margin: 0 auto;
+  min-width: 335px;
+
+  @include mobileScreen {
+    width: 365px;
+  }
+
+  @include tabletScreen {
+    width: 734px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  @include desktopScreen {
+    width: 1345px;
+  }
+}
+
+main {
+  padding-top: 37px;
+}
+
+.active {
+  background-color: $nav-hover-color;
+}
+
+.active .nav-link-icon {
+  stroke: $nav-hover-text-color;
+}
+
+.active .nav-link-text {
+  color: $nav-hover-text-color;
 }
